@@ -13,8 +13,7 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.MockitoAnnotations.initMocks;
 
 @RunWith(Parameterized.class)
-public class BurgerGetPriceTest
-{
+public class BurgerGetPriceTest {
     private final float priceBun;
     private final float priceIngredient;
     private Burger burger;

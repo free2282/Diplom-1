@@ -1,4 +1,3 @@
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,8 +10,6 @@ import praktikum.Burger;
 import praktikum.Ingredient;
 import praktikum.IngredientType;
 
-import static praktikum.IngredientType.FILLING;
-import static praktikum.IngredientType.SAUCE;
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
     private Ingredient ingredient;
@@ -31,23 +28,21 @@ public class BurgerTest {
     }
 
     @Test
-    public void setBuns(){
+    public void setBuns() {
         Mockito.when(burger.bun.getName()).thenReturn("Тест2");
         Assert.assertEquals("Элемент не добавлен", "Тест2", burger.bun.getName());
     }
 
     @Test
-    public void checkAddIngredient()
-    {
-        Assert.assertFalse("Элемент не добавлен",burger.ingredients.isEmpty());
+    public void checkAddIngredient() {
+        Assert.assertFalse("Элемент не добавлен", burger.ingredients.isEmpty());
     }
 
     @Test
-    public void checkRemoveIngredient()
-    {
+    public void checkRemoveIngredient() {
         burger.removeIngredient(0);
 
-        Assert.assertTrue("Элемент не удален" ,burger.ingredients.isEmpty());
+        Assert.assertTrue("Элемент не удален", burger.ingredients.isEmpty());
     }
 
     @Test
@@ -65,8 +60,7 @@ public class BurgerTest {
         StringBuilder receipt = new StringBuilder(String.format("(==== %s ====)%n", burger.bun.getName()));
 
         for (Ingredient ingredient : burger.ingredients) {
-            receipt.append(String.format("= %s %s =%n", ingredient.getType().toString().toLowerCase(),
-                    ingredient.getName()));
+            receipt.append(String.format("= %s %s =%n", ingredient.getType().toString().toLowerCase(), ingredient.getName()));
         }
 
         receipt.append(String.format("(==== %s ====)%n", burger.bun.getName()));

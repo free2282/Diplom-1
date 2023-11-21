@@ -1,17 +1,13 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
 import praktikum.Bun;
 
-public class BunTest
-{
+public class BunTest {
     private Bun bun;
 
-
     @Before
-    public void setUp()
-    {
+    public void setUp() {
         bun = new Bun("Белая", 0.1f);
     }
 
