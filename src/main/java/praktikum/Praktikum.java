@@ -6,10 +6,10 @@ public class Praktikum {
 
     public static void main(String[] args) {
         // Инициализируем базу данных
-        Database database = new Database();
+        praktikum.Database database = new praktikum.Database();
 
         // Создадим новый бургер
-        Burger burger = new Burger();
+        Burger burger = new praktikum.Burger();
 
         // Считаем список доступных булок из базы данных
         List<Bun> buns = database.availableBuns();
